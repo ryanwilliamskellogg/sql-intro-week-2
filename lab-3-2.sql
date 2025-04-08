@@ -39,4 +39,9 @@
 -- | Washington Nationals          | 78.0             |
 -- +-------------------------------+------------------+
 
+-- 2000 is part of the 20th century, start in 2001
 
+SELECT name, year, AVG(wins)
+FROM teams
+WHERE year >= 2001
+GROUP BY name;

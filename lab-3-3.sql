@@ -15,4 +15,11 @@
 -- | 2019 | Houston Astros                | 107       |
 -- | 2004 | St. Louis Cardinals           | 105       |
 
+SELECT year, MAX(wins) 
+from teams
+WHERE year >= 1960
+GROUP BY year
+ORDER BY MAX(wins) DESC;
 
+-- Including anything in the SELECT function that doesn't show up in the GROUP BY or ORDER BY functions would lead to technically imperfect code
+-- What that means is anything in SELECT has to be from the variables in GROUP BY and ORDER BY
